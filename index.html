@@ -1,6 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="">
 
+<!--
+    https://github.com/soxofaan/klikklak
+-->
+
 <head>
     <meta charset="utf-8">
     <title>Klik Klak!</title>
@@ -53,7 +57,7 @@
 
             function klik_klak() {
                 var word = [slot1, slot2, slot3].map(random_pick).join("");
-                document.getElementById("word").innerHTML = word
+                document.getElementById("word").innerHTML = word;
             }
 
             document.addEventListener("DOMContentLoaded", function () {
@@ -63,15 +67,13 @@
 
             function update_font_size() {
                 var size = Math.min(0.3 * window.innerWidth, 0.8 * window.innerHeight);
-                console.log(size)
                 document.getElementById("word").style.fontSize = size + "px";
             }
 
             window.addEventListener('resize', update_font_size);
-            update_font_size()
+            update_font_size();
 
         })(document)
-
     </script>
 </body>
 
